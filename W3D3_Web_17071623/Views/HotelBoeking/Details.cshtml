@@ -1,0 +1,12 @@
+﻿@model HotelBoeking
+
+@{
+}
+
+<h2>Bedankt voor het boeken voor een hotelkamer!</h2>
+<h3>Hieronder kunt u de details vinden van uw vertrek en aankomst</h3>
+
+<div>Uw aankomst: @Model.Aankomst</div>
+<div>Uw vertrek: @Model.Vertrek</div>
+
+<a asp-area="" asp-controller="HotelBoeking" asp-action="Index">Terug naar Index</a>

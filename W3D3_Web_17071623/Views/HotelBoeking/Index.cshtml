@@ -1,0 +1,37 @@
+﻿@model List<HotelBoeking>
+@{
+}
+
+<h2>Boek een hotel!</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <b>Vertrek</b>
+        </div>
+        <div class="col-lg-3">
+            <b>Aankomst</b>
+        </div>
+        <div class="col-lg-3">
+            <b>Actie</b>
+        </div>
+    </div>
+    @foreach (HotelBoeking boeking in Model)
+    {
+    <div class="row">
+        <div class="col-lg-3">
+            @boeking.Aankomst
+        </div>
+        <div class="col-lg-3">
+            @boeking.Vertrek
+        </div>
+        <div class="col-lg-3">
+            <a asp-area="" asp-controller="HotelBoeking" asp-action="Details">Details</a> |
+            <a asp-area="" asp-controller="HotelBoeking" asp-action="Edit">Edit</a> 
+        </div>
+    </div>   
+    }
+</div>
+
+<br>
+<a asp-area="" asp-controller="HotelBoeking" asp-action="Create">Boek een kamer!</a>
