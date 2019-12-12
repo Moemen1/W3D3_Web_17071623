@@ -20,14 +20,14 @@
     {
     <div class="row">
         <div class="col-lg-3">
-            @boeking.Aankomst
+            @boeking.Aankomst.ToShortDateString()
         </div>
         <div class="col-lg-3">
-            @boeking.Vertrek
+            @boeking.Vertrek.ToShortDateString()
         </div>
         <div class="col-lg-3">
             <a asp-area="" asp-controller="HotelBoeking" asp-action="Details">Details</a> |
-            <a asp-area="" asp-controller="HotelBoeking" asp-action="Edit">Edit</a> 
+            <a asp-area="" asp-controller="HotelBoeking" asp-action="Edit" asp-route-id="@boeking.HotelBoekingId".>Edit</a> 
         </div>
     </div>   
     }

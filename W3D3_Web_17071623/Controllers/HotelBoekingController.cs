@@ -37,10 +37,28 @@ namespace W3D3_Web_17071623.Controllers
             return View("Details", boeking);
         }
         
-        public IActionResult Details()
-        {          
 
-            return View();
+        public IActionResult Details(int id)
+        { 
+            return View(BoekingsList[id]);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            return View(BoekingsList[id]);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, HotelBoeking nieuweBoeking)
+        {
+            if (BoekingsList[id] != null)
+            {
+                BoekingsList[id].Aankomst = nieuweBoeking.Aankomst;
+                BoekingsList[id].Vertrek = nieuweBoeking.Vertrek;
+            }
+
+            return RedirectToAction("Index");
         }
 
     }

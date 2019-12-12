@@ -1,0 +1,12 @@
+﻿@model HotelBoeking
+
+@{
+}
+
+<h2>Edit</h2>
+
+<form action="/HotelBoeking/Edit" method="post">
+    Aankomst: <input type="date" value ="@Model.Aankomst" name="Aankomst" />
+    Vertrek: <input type="date" value="@Model.Vertrek" name="Vertrek" />
+    <input type="submit" value="Boek" />
+</form>
